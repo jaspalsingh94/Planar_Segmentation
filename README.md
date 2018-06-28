@@ -3,7 +3,7 @@
 
 CUNY Graduate Center
 
-Prof Stamos
+Professor Stamos
 
 # Task
  Given a range image R, segment the image into planar components
@@ -12,7 +12,7 @@ Prof Stamos
  Range image R in a .ptx format. The first 10 lines are the header lines that include the number of scan lines, pounts per scan line, and the transformations. Each point has x, y, z coordinates, with respect to the scanner, and the intensity of the point. Range image has a grid structure. 
 
 # Region-growing algorithm
- Sequentially label the points on the same plane with the same label by traversing the cloud using its grid structure. Whether two points lie on the same plane is dicided by comparing the normals of the points. Normal for a point is computed by first taking the sum of the covariance matrices of the points in a small neighborhood around the point. Then eigenvalue decomposition is done and the eigenvector corresponding to the smallest eigenvalue is chosen as the normal. 
+ Sequentially label the points on the same plane with the same label by traversing the cloud using its grid structure. Whether two points lie on the same plane is decided by comparing the normals of the points. Normal for a point is computed by first taking the sum of the covariance matrices of the points in a small neighborhood around the point. Then eigenvalue decomposition is done and the eigenvector corresponding to the smallest eigenvalue is chosen as the normal. 
 
 ![Alt text](./Seq_label.jpeg?raw=true "Planar segmentation via sequential labeling")
 
@@ -27,3 +27,9 @@ Prof Stamos
 
 ![Alt text](./1-pt.jpeg?raw=true "Planar segmentation via defining a plane using 1 point and its normal")
 
+
+Both RANSAC algoritms were ran for 500 iterations (on average took 18 hours). 
+For the examples with complicated structures, more iterations are required to achieve reasonable planar segmentation. 
+
+Make file included. 
+After compiling, run ./p1 input_file.ptx output_1.ptx output_2.ptx output_3.ptx
