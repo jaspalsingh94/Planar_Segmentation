@@ -31,5 +31,8 @@ Professor Stamos
 Both RANSAC algoritms were ran for 500 iterations (on average took 18 hours). 
 For the examples with complicated structures, more iterations are required to achieve reasonable planar segmentation. 
 
-Make file included. 
+Make file included.
+ 
+Need to install the eigen library to run the code: http://eigen.tuxfamily.org/index.php?title=Main_Page
+
 After compiling, run ./p1 input_file.ptx output_1.ptx output_2.ptx output_3.ptx
