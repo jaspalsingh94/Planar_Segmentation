@@ -1,6 +1,8 @@
 # Project 1 - Planar Segmentation
 3D Photography 
+
 CUNY Graduate Center
+
 Prof Stamos
 
 # Task
@@ -18,6 +20,10 @@ Prof Stamos
 
 - Apply RANSAC by selecting 3 points and then defining a plane using the points.Vote each plane by computing the distance between all the points and the plane. Points with a distance larger than the distance_threshold do not give the plane a vote. Planes with the highest votes are chosen as planar regions.  
 
---Insert images for 3 point ransac
+![Alt text](./3-pt-plane.jpeg?raw=true "Planar segmentation via defining a plane using 3 points")
+
 
 - Apply RANSAC by selecting a point and its normal to define the plane. Once again, vote the planes by computing the point to plane distance and giving votes for points that are within the distance threshold. Chose planes with the highest votes as the planar region.
+
+![Alt text](./1-pt.jpeg?raw=true "Planar segmentation via defining a plane using 1 point and its normal")
+
