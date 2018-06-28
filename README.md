@@ -1,7 +1,7 @@
 # Project 1 - Planar Segmentation
-# 3D Photography 
-# CUNY Graduate Center
-# Prof Stamos
+3D Photography 
+CUNY Graduate Center
+Prof Stamos
 
 # Task
  Given a range image R, segment the image into planar components
@@ -12,7 +12,7 @@
 # Region-growing algorithm
  Sequentially label the points on the same plane with the same label by traversing the cloud using its grid structure. Whether two points lie on the same plane is dicided by comparing the normals of the points. Normal for a point is computed by first taking the sum of the covariance matrices of the points in a small neighborhood around the point. Then eigenvalue decomposition is done and the eigenvector corresponding to the smallest eigenvalue is chosen as the normal. 
 
---Insert images for Sequntial labeling. 
+![Alt text](./Seq_label.jpeg?raw=true "Planar segmentation via sequential labeling")
 
 # RANSAC
 
